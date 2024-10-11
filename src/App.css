@@ -1,0 +1,30 @@
+Custom scrollbar
+body::-webkit-scrollbar {
+  width: 12px; /* Adjust width for larger scrollbars */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #38a169; /* Green scrollbar */
+  border-radius: 10px; /* Rounded edges */
+  border: 3px solid #2d3748; /* Darker background for scrollbar track */
+}
+
+body::-webkit-scrollbar-track {
+  background: #1a202c; /* Dark track background */
+}
+
+/* Ensure the sidebar extends to the bottom */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh; /* Full height of the viewport */
+  background-color: #2d3748; /* Same color scheme as your design */
+  overflow-y: auto;
+  width: 250px;
+}
+
+/* Content spacing when sidebar is present */
+.content {
+  margin-left: 250px; /* Leave space for the sidebar */
+}
