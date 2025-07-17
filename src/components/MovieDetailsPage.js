@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 
 const MovieDetailsPage = () => {
-  // const { movie } = props;
   const movie = JSON.parse(localStorage.getItem("movie"));
 
   const countriesList = [
@@ -322,9 +321,6 @@ export default MovieDetailsPage;
 const TopHeader = () => {
   return (
     <header className="p-3 max-w-[1400px] fixed w-full top-0 z-50 bg-gradient-to-b from-black/70 via-black/30 to-transparent flex justify-between items-center gap-4 md:gap-12">
-      {/* gradient layer */}
-      {/* <div className="absolute hidden top-0 left-0 -z-10 h-[120%] bg-gradient-to-b from-black/75 via-black/10 to-transparent w-full md:block"></div> */}
-      {/* content */}
       <div className="flex items-center gap-3">
         <Link to={"/"}>
           {" "}

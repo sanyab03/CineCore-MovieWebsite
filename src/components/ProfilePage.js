@@ -4,21 +4,18 @@ const ProfilePage = () => {
   return (
     <div className="bg-black-900 text-gray-100 h-screen overflow-auto p-8 custom-scrollbar">
       <div className="max-w-3xl mx-auto">
-        {/* Profile Header */}
         <div className="flex flex-col md:flex-row items-center justify-between mb-8">
           <div className="mb-4 md:mb-0">
             <h1 className="text-3xl font-bold">Profile Settings</h1>
             <p className="text-gray-400">For Joe Ando</p>
           </div>
           <div className="text-blue-400">
-            {/* Placeholder for profile icon */}
             <span role="img" aria-label="profile-icon" className="text-4xl">
               😃
             </span>
           </div>
         </div>
 
-        {/* Preferences Section */}
         <div className="bg-black-800 rounded-lg p-6 shadow-lg">
           <h2 className="text-xl font-semibold mb-6">Preferences</h2>
           <ul className="space-y-4">
@@ -37,7 +34,6 @@ const ProfilePage = () => {
           </ul>
         </div>
 
-        {/* Delete Profile Section */}
         <div className="mt-10">
           <button className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg flex items-center justify-center">
             <svg

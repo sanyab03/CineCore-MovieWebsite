@@ -1,9 +1,6 @@
-
-
 import React, { useState } from "react";
 
 const Reviews = () => {
-  // State to hold review details
   const [reviews, setReviews] = useState([]);
   const [formData, setFormData] = useState({
     title: "",
@@ -11,22 +8,17 @@ const Reviews = () => {
     content: "",
   });
 
-  // Handle form input change
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validate form data
     if (formData.title && formData.rating && formData.content) {
-      // Add the new review to the list
       setReviews([...reviews, formData]);
 
-      // Reset the form
       setFormData({
         title: "",
         rating: "",
@@ -41,8 +33,6 @@ const Reviews = () => {
     <div className="bg-black text-gray-100 p-5">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-4xl font-bold mb-8 text-center">Reviews</h2>
-
-        {/* Review Form */}
         <form onSubmit={handleSubmit} className="mb-8">
           <div className="mb-4">
             <label
@@ -59,7 +49,7 @@ const Reviews = () => {
               value={formData.title}
               onChange={handleChange}
               className="w-full p-2 rounded-md bg-green-100 text-black-900 focus:outline-none focus:ring-2 focus:ring-green-600"
-              style={{ color: 'black' }} // Style to make the input text black
+              style={{ color: 'black' }} 
               placeholder="Enter the title of the movie/show"
               required
             />
@@ -104,7 +94,7 @@ const Reviews = () => {
               onChange={handleChange}
               className="w-full p-2 rounded-md bg-green-100 text-black-800 focus:outline-none focus:ring-2 focus:ring-green-600"
               placeholder="Write your review here"
-              style={{ color: 'black' }} // Custom style for placeholder
+              style={{ color: 'black' }} 
               rows="5"
               required
             />

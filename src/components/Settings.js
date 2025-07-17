@@ -8,7 +8,6 @@ const Settings = () => {
     notifications: true,
   });
 
-  // Handle form input changes
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData({
@@ -17,12 +16,9 @@ const Settings = () => {
     });
   };
 
-  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Updated settings:", formData);
-
-    // Optionally clear the password field after submission
     setFormData((prevState) => ({
       ...prevState,
       password: "",
@@ -35,7 +31,6 @@ const Settings = () => {
         <h2 className="text-4xl font-bold mb-8 text-center">Settings</h2>
 
         <form onSubmit={handleSubmit} className="p-6 rounded-lg shadow-md ">
-          {/* Profile Section */}
           <div className="mb-8">
             <h3 className="text-2xl font-semibold mb-4">Profile</h3>
             <div className="mb-4">
@@ -80,7 +75,6 @@ const Settings = () => {
             </div>
           </div>
 
-          {/* Password Change Section */}
           <div className="mb-8">
             <h3 className="text-2xl font-semibold mb-4">Change Password</h3>
             <div className="mb-4">
@@ -104,8 +98,6 @@ const Settings = () => {
               />
             </div>
           </div>
-
-          {/* Notifications Section */}
           <div className="mb-8">
             <h3 className="text-2xl font-semibold mb-4">Notifications</h3>
             <div className="flex items-center">

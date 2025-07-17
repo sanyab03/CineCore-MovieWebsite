@@ -8,7 +8,7 @@ import Settings from "./Settings";
 
 const Dashboard = () => {
   const [selectedOption, setSelectedOption] = useState("profile");
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false); // State for sidebar visibility
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const renderContent = () => {
     switch (selectedOption) {
@@ -29,12 +29,10 @@ const Dashboard = () => {
 
   return (
     <div className="flex h-screen">
-      {/* Hamburger Button for Mobile */}
       <button
         className="md:hidden fixed top-4 left-4 z-50 bg-green-700 text-white p-2 rounded-full"
         onClick={() => setIsSidebarOpen(!isSidebarOpen)}
       >
-        {/* Hamburger Icon */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-6 w-6"
@@ -51,14 +49,12 @@ const Dashboard = () => {
         </svg>
       </button>
 
-      {/* Sidebar */}
       <aside
         className={`fixed md:relative z-40 md:z-0 md:w-64 bg-custom-dark-green text-white p-4 rounded-tl-3xl rounded-bl-3xl transition-transform transform ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         } md:translate-x-0 md:flex md:flex-col`}
         style={{ borderRadius: "0 30px 30px 0" }}
       >
-        {/* Make CineCore a clickable button */}
         <Link to="/" className="text-white text-2xl font-bold mb-6">
           CineCore
         </Link>
@@ -78,7 +74,7 @@ const Dashboard = () => {
               } mb-2`}
               onClick={() => {
                 setSelectedOption(item.key);
-                setIsSidebarOpen(false); // Close sidebar on option click in mobile
+                setIsSidebarOpen(false);
               }}
             >
               {item.label}
@@ -87,7 +83,6 @@ const Dashboard = () => {
         </ul>
       </aside>
 
-      {/* Overlay for Mobile Sidebar */}
       {isSidebarOpen && (
         <div
           className="fixed inset-0 bg-black opacity-50 z-30 md:hidden"
@@ -95,7 +90,6 @@ const Dashboard = () => {
         ></div>
       )}
 
-      {/* Main Content */}
       <main className="flex-1 bg-black text-white p-6">
         {renderContent()}
       </main>

@@ -13,7 +13,7 @@ import photoicon from '../assets/photoicon.png';
 
 const Homepage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeButton, setActiveButton] = useState("movies"); // Track active button
+  const [activeButton, setActiveButton] = useState("movies"); 
   const myContext = useContext(MyContext);
 
   useEffect(() => {
@@ -24,8 +24,8 @@ const Homepage = () => {
   }, [isMenuOpen]);
 
   const handleButtonClick = (type) => {
-    setActiveButton(type); // Update active button
-    myContext.fetchMoviesForGrid(type); // Fetch data
+    setActiveButton(type); 
+    myContext.fetchMoviesForGrid(type); 
   };
 
   return (

@@ -14,11 +14,10 @@ const LikesDislikes = () => {
   const sampleDislikes = [];
 
   return (
-    <div className="bg-black w-full overflow-hidden"> {/* Ensure full width and height */}
-      <div className="mx-auto"> {/* Center the content */}
+    <div className="bg-black w-full overflow-hidden"> 
+      <div className="mx-auto">
         <h2 className="text-4xl font-bold mb-6 text-center text-white">Likes & Dislikes</h2>
 
-        {/* Likes Section */}
         <div>
           <h3 className="text-3xl font-semibold mb-4 text-green-400">Liked Movies</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -48,7 +47,6 @@ const LikesDislikes = () => {
           </div>
         </div>
 
-        {/* Dislikes Section */}
         <div className="mt-8">
           <h3 className="text-3xl font-semibold mb-4 text-red-400">Disliked Movies</h3>
           {sampleDislikes.length === 0 ? (
@@ -71,7 +69,6 @@ const LikesDislikes = () => {
                     <h3 className="text-xl font-bold text-white">{movie.title}</h3>
                     <p className="text-gray-400">{movie.genre}</p>
                     <p className="text-yellow-400 mt-2">⭐ {movie.rating}</p>
-                    {/* Action buttons */}
                     <div className="mt-4 flex justify-between items-center">
                       <button className="bg-green-600 px-3 py-1 rounded-md text-white hover:bg-green-700">
                         Like Again
